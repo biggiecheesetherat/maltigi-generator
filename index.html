@@ -1,0 +1,19 @@
+<html>
+<head><title>Maltigi Generator</title></head>
+<body>
+<h1>Maltigi Generator</h1>
+<p>Type how many maltigi you want and click generate</p>
+<br>
+<br>
+<input name="a" type="number" maxlength="512" id="amount">
+<button onclick="maltigi()">Summon Maltigi</button>
+<script>
+function maltigi(){
+  var maltigi = document.getElementById('amount').value
+  for (let step = 0; step < maltigi; step++) {
+    window.open("https://biggiecheesetherat.github.io/maltigi-generator/m.jpeg, '_blank');
+  }
+}
+</script>
+</body>
+</html>
