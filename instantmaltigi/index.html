@@ -1,0 +1,23 @@
+<html>
+<head><title>Maltigi Generator</title></head>
+<body>
+<h1>Confirm</h1>
+<p>Do you want this page to summon Maltigi?</p>
+<p>This page will make {NUM} Maltigi(s).</p>
+<br>
+<br>
+<button onclick="maltigi()">Confirm</button>
+<script>
+function maltigi(){
+  const urlParams = new URLSearchParams(window.location.search);
+  var maltigi = urlParams.get('amount'); || 1
+  for (let step = 0; step < maltigi; step++) {
+    window.open("https://biggiecheesetherat.github.io/maltigi-generator/m.jpeg", '_blank');
+  }
+}
+</script>
+<noscript>
+  <p>You either do not have JavaScript enabled or your browser doesn't support Javascript, so you cannot use the Maltigi Generator :(</p>
+</noscript>
+</body>
+</html>
