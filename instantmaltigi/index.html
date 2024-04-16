@@ -3,18 +3,21 @@
 <body>
 <h1>Confirm</h1>
 <p>Do you want this page to summon Maltigi?</p>
-<p>This page will make {NUM} Maltigi(s).</p>
+<p id="mcount">This page will make UNDEFINED Maltigi(s).</p>
+<p>Make sure that your browser allows this website to create popups or you will get one maltigi</p>
 <br>
 <br>
 <button onclick="summon()">Confirm</button>
 <script>
+const urlParams = new URLSearchParams(window.location.search);
 function summon(){
-  const urlParams = new URLSearchParams(window.location.search);
   var maltigi = urlParams.get('amount') || 1
   for (let step = 0; step < maltigi; step++) {
     window.open("https://biggiecheesetherat.github.io/maltigi-generator/m.jpeg", '_blank');
   }
 }
+
+document.getElementById("mcount").innerText = urlParams.get('amount') || 1
 </script>
 <noscript>
   <p>You either do not have JavaScript enabled or your browser doesn't support Javascript, so you cannot use the Maltigi Generator :(</p>
