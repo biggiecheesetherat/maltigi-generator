@@ -6,9 +6,9 @@
 <p>This page will make {NUM} Maltigi(s).</p>
 <br>
 <br>
-<button onclick="maltigi()">Confirm</button>
+<button onclick="summon()">Confirm</button>
 <script>
-function maltigi(){
+function summon(){
   const urlParams = new URLSearchParams(window.location.search);
   var maltigi = urlParams.get('amount'); || 1
   for (let step = 0; step < maltigi; step++) {
